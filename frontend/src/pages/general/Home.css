@@ -1,0 +1,132 @@
+.home-reel {
+  height: 100vh;
+  width: 100%;
+  background: #0b0b0b;
+  color: white;
+  overflow: hidden;
+}
+
+.home-reel--login-required {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.home-reel__login-box {
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.home-reel__login-box h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+}
+
+.home-reel__login-box p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  margin-bottom: 1.75rem;
+}
+
+.home-reel__login-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.home-reel__secondary-btn {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.home-reel__tag {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  opacity: 0.75;
+  margin-bottom: 0.35rem;
+}
+
+.home-reel__container {
+  height: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.home-reel__slide {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  display: grid;
+  place-items: center;
+  background: #070707;
+}
+
+.home-reel__video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-reel__info {
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.5rem 1.25rem 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.85) 75%
+  );
+  pointer-events: auto;
+}
+
+.home-reel__label {
+  display: inline-flex;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.9rem;
+}
+
+.home-reel__info h2 {
+  font-size: clamp(1.6rem, 2.2vw, 2.3rem);
+  line-height: 1.05;
+  margin: 0 0 0.75rem;
+}
+
+.store-btn {
+  z-index: 11;
+  padding: 8px 20px;
+  background-color: #e43c4e;
+  color: white;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 2px;
+  text-decoration: none;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.store-btn:hover {
+  background-color: #ef4f5f;
+  font-weight: 600;
+}
