@@ -26,7 +26,13 @@ async function registerUser(req, res) {
 
   const userToken = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
 
-  res.cookie("userToken", userToken);
+  const cookieOptions = {
+  httpOnly: true,
+  secure: true,
+  sameSite: "none",
+};
+
+res.cookie("userToken", userToken, cookieOptions);
 
   res.status(201).json({
     message: "User registerd successfully",
@@ -66,7 +72,13 @@ async function loginUser(req, res) {
     process.env.JWT_SECRET,
   );
 
-  res.cookie("userToken", userToken);
+const cookieOptions = {
+  httpOnly: true,
+  secure: true,
+  sameSite: "none",
+};
+
+res.cookie("userToken", userToken, cookieOptions);
 
   res.status(200).json({
     message: "User logged in succesfully",
